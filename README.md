@@ -1,4 +1,4 @@
-# Awesome Agent Skills
+# Agent Toolbox
 
 A curated collection of **agent skills, plugins, and MCP (Model Context Protocol) configurations** for AI coding agents.
 
