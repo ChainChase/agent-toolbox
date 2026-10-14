@@ -1,0 +1,18 @@
+{
+  "name": "qoder-domain-agent-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Qoder Agent SDK 领域 Agent 最小可运行脚手架（TypeScript）",
+  "scripts": {
+    "start": "tsx agent.ts"
+  },
+  "dependencies": {
+    "@qoder-ai/qoder-agent-sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

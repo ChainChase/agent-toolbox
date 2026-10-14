@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "Kaggle": {
+      "command": "D:\\Python\\Python312\\Scripts\\kaggle-mcp-server.exe",
+      "env": {
+        "KAGGLE_KEY": "${KAGGLE_KEY}",
+        "KAGGLE_USERNAME": "Canchs"
+      }
+    },
+    "Atomgit": {
+      "command": "E:\\应用\\Node\\npx.cmd",
+      "args": [
+        "-y",
+        "@atomgit.com/atomgit-mcp-server"
+      ],
+      "env": {
+        "ATOMGIT_ENABLE_DANGEROUS_TOOLS": "false",
+        "ATOMGIT_TOKEN": "${ATOMGIT_TOKEN}"
+      }
+    },
+    "Huawei Cloud": {
+      "command": "E:\\应用\\Node\\node.exe",
+      "args": [
+        "C:\\Users\\晖\\AppData\\Roaming\\npm\\node_modules\\huaweicloud-devkit\\plugins\\huaweicloud-core\\src\\mcp-server.mjs"
+      ],
+      "env": {
+        "HCLOUD_BIN": "C:\\Users\\晖\\hcloud\\hcloud.exe"
+      }
+    },
+    "Framelink MCP for Figma": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--figma-api-key=YOUR_KEY",
+        "--stdio"
+      ]
+    },
+    "ascend-doc": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "ascend-doc-mcp@latest"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cannbot-skills",
+  "displayName": "CANNBot Skills",
+  "version": "0.1.0",
+  "description": "CANN/Ascend NPU development Agent Skills from gitcode.com/cann/cannbot-skills (commit 5023e3ed, 2026-09-09): AscendC operator development (tiling design, precision/crash/runtime debug, code review, perf optimization, ST/UT), Catlass/PyPTO/TileLang/Triton frameworks, and CANN toolchain (asys/msaicerr/msnpureport).",
+  "descriptionZh": "来自 gitcode.com/cann/cannbot-skills（commit 5023e3ed，2026-09-09）的 CANN/昇腾开发智能体技能集：AscendC 算子开发全流程（tiling 设计、精度/崩溃/运行时调试、代码检视、性能优化、ST/UT 测试）、Catlass/PyPTO/TileLang/Triton 算子框架、CANN 工具链（asys/msaicerr/msnpureport）。",
+  "author": {
+    "name": "CANN SIG cannbot"
+  },
+  "keywords": [
+    "cann",
+    "ascendc",
+    "ascend",
+    "operator",
+    "tiling",
+    "skills"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "cann",
+    "ascend",
+    "operator"
+  ],
+  "skills": "./skills/"
+}

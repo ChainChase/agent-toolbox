@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">PRD Authoring</title>
+  <desc id="desc">A product requirements document with structured lines and a completed check.</desc>
+  <rect width="512" height="512" rx="88" fill="#F7F8FA"/>
+  <path d="M148 72h154l76 76v292H148z" fill="#FFFFFF" stroke="#1F2937" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M302 72v76h76" fill="#E8F5EE" stroke="#1F2937" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M196 212h132M196 266h94M196 320h68" fill="none" stroke="#6B7280" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="336" cy="344" r="72" fill="#18A058"/>
+  <path d="m301 344 23 23 47-51" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
