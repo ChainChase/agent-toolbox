@@ -48,18 +48,20 @@
 
 ### MCP 配置
 
-`MCP/mcp.json` 是标准 MCP 客户端配置。**仓库不包含任何密钥**——所有凭据均使用 `${环境变量}` 占位符，使用前请设置对应的环境变量：
+`MCP/mcp.json` 是标准 MCP 客户端配置。**仓库内不含任何个人敏感信息**——所有 MCP 配置的密钥、账号、本机路径均已替换为 `${环境变量}` 占位符，使用前请设置对应的环境变量：
 
 | 环境变量 | 用途 |
 |----------|---------|
-| `KAGGLE_KEY` | Kaggle MCP 服务器 |
+| `KAGGLE_KEY` / `KAGGLE_USERNAME` | Kaggle MCP 服务器 |
 | `ATOMGIT_TOKEN` | Atomgit MCP 服务器 |
+| `FIGMA_API_KEY` | Figma MCP 服务器（Framelink） |
+| `HUAWEICLOUD_MCP_SERVER_PATH` / `HCLOUD_BIN` | 华为云 MCP 服务器 |
 | `GITHUB_PAT_TOKEN` | GitHub MCP 服务器（`plugin/github/.mcp.json`） |
+| `GITHUB_APP_CONNECTOR_ID` | GitHub App 连接 ID（`plugin/github/.app.json`） |
 
 ## 注意事项
 
-- 仓库内不含任何真实密钥，凭据均以 `${环境变量}` 占位；
-- `MCP/mcp.json` 中的可执行文件路径为作者本机路径，使用时请按本机实际安装位置修改；
+- 仓库内**不含任何个人敏感信息**：所有 MCP 配置的密钥、账号、本机路径均已替换为 `${环境变量}` 占位符，使用时按需设置；
 - `plugin/lark/bin/lark-cli.exe`（约 47MB 的 Windows 可执行文件）未纳入版本库，需从飞书开放平台单独获取后放入该目录；
 - 各技能内的 `references/` 文档为对应技能的参考资料，可按需查阅。
 

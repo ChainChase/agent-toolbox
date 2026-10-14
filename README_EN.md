@@ -48,18 +48,20 @@ Each skill follows the standard agent skill layout (`SKILL.md` + `references/` +
 
 ### MCP Configuration
 
-`MCP/mcp.json` is a standard MCP client config. **Secrets are not included** — credential values use `${ENV_VAR}` placeholders. Set the corresponding environment variables before use:
+`MCP/mcp.json` is a standard MCP client config. **No personal information is stored in this repo** — all secrets, account names and local paths in the MCP configs are replaced with `${ENV_VAR}` placeholders. Set the corresponding environment variables before use:
 
 | Variable | Used by |
 |----------|---------|
-| `KAGGLE_KEY` | Kaggle MCP server |
+| `KAGGLE_KEY` / `KAGGLE_USERNAME` | Kaggle MCP server |
 | `ATOMGIT_TOKEN` | Atomgit MCP server |
+| `FIGMA_API_KEY` | Figma MCP server (Framelink) |
+| `HUAWEICLOUD_MCP_SERVER_PATH` / `HCLOUD_BIN` | Huawei Cloud MCP server |
 | `GITHUB_PAT_TOKEN` | GitHub MCP server (`plugin/github/.mcp.json`) |
+| `GITHUB_APP_CONNECTOR_ID` | GitHub App connector ID (`plugin/github/.app.json`) |
 
 ## Notes
 
-- No real secrets are stored in this repo — all credentials use `${ENV_VAR}` placeholders;
-- Executable paths in `MCP/mcp.json` are the author's local paths; adjust them to your own install locations;
+- **No personal information is stored** — all secrets, account names and local paths in the MCP configs use `${ENV_VAR}` placeholders;
 - `plugin/lark/bin/lark-cli.exe` (~47MB Windows binary) is not tracked in git — download it from the Feishu/Lark open platform and place it in that directory;
 - The `references/` docs inside each skill are reference materials for that skill.
 
