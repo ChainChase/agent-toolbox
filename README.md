@@ -1,59 +1,68 @@
-# Agent Toolbox
+# Agent 工具箱（Agent Toolbox）
 
-A curated collection of **agent skills, plugins, and MCP (Model Context Protocol) configurations** for AI coding agents.
+精选的**智能体技能（Skills）、插件（Plugins）与 MCP（Model Context Protocol）配置**合集，适用于各类 AI 编程智能体。
 
-## Structure
+[English](README_EN.md) | 中文
+
+## 目录结构
 
 ```
-├── skills/     # Standalone agent skills
-├── plugin/     # Full agent plugins (each with multiple skills)
-└── MCP/        # MCP server configurations (mcp.json)
+├── skills/     # 独立智能体技能
+├── plugin/     # 完整智能体插件（每个包含多个技能）
+└── MCP/        # MCP 服务器配置（mcp.json）
 ```
 
-## Contents
+## 内容清单
 
-### `plugin/` — Agent Plugins
+### `plugin/` — 智能体插件
 
-| Plugin | Description |
+| 插件 | 说明 |
 |--------|-------------|
-| `browser` | Browser automation & web interaction skills |
-| `chrome` | Chrome browser control |
-| `cannbot-skills` | Ascend C / NPU operator development skills (AscendC, Triton, TileLang, CATLASS, profiling, debugging, precision, sync audit, etc.) |
-| `codex-obsidian` | Obsidian CLI workflows |
-| `computer-use` | Computer use / GUI automation |
-| `data-processing` | Data processing workflows |
-| `deep-research-assistant` | Deep research assistant |
-| `frontend-design` | Frontend design system skills |
-| `github` | GitHub integration (MCP + app config) |
-| `html-report-presentation` | HTML report / deck generation |
-| `jingmei-ppt` | PPT generation |
-| `lark` | Feishu/Lark suite (IM, docs, base, slides, mail, OKR, approval, wiki, drive, task, meeting…) |
-| `office-plugin` | Office document skills (docx, pptx, xlsx) |
-| `prd-authoring` | PRD authoring |
-| `rapid-prototype-craft` | Rapid prototyping |
-| `research-data-analysis-workspace` | Research data analysis workspace |
-| `visual-image-generator` | Visual image generation |
-| `web-app-development` | Web app development |
-| `whiteboard` | Whiteboard design (canvas editor) |
+| `browser` | 浏览器自动化与网页交互 |
+| `chrome` | Chrome 浏览器控制 |
+| `cannbot-skills` | 昇腾 Ascend C / NPU 算子开发技能集（AscendC、Triton、TileLang、CATLASS、性能分析、调试、精度、同步检视等） |
+| `codex-obsidian` | Obsidian CLI 工作流 |
+| `computer-use` | 计算机使用 / GUI 自动化 |
+| `data-processing` | 数据处理工作流 |
+| `deep-research-assistant` | 深度研究助手 |
+| `frontend-design` | 前端设计系统技能 |
+| `github` | GitHub 集成（MCP + App 配置） |
+| `html-report-presentation` | HTML 报告 / 演示文稿生成 |
+| `jingmei-ppt` | PPT 生成 |
+| `lark` | 飞书套件（IM、文档、多维表格、幻灯片、邮件、OKR、审批、知识库、云盘、任务、会议等） |
+| `office-plugin` | Office 文档技能（docx、pptx、xlsx） |
+| `prd-authoring` | PRD 编写 |
+| `rapid-prototype-craft` | 快速原型制作 |
+| `research-data-analysis-workspace` | 研究数据分析工作区 |
+| `visual-image-generator` | 视觉图像生成 |
+| `web-app-development` | Web 应用开发 |
+| `whiteboard` | 白板设计（canvas 编辑器） |
 
-### `skills/` — Standalone Skills
+### `skills/` — 独立技能
 
-`docx-cn`, `excel`, `frontend-design-system`, `model-api-reference`, `pdf-intelligence-suite`, `qoder-agent-sdk-skill`, `self-improvement`, `ui-designer`
+`docx-cn`、`excel`、`frontend-design-system`、`model-api-reference`、`pdf-intelligence-suite`、`qoder-agent-sdk-skill`、`self-improvement`、`ui-designer`
 
-## Usage
+## 使用方法
 
-Each skill follows the standard agent skill layout (`SKILL.md` + `references/` + `scripts/`). Install by copying the desired plugin/skill folder into your agent's skills directory (e.g. `~/.copilot/skills/` or `.github/skills/`).
+每个技能遵循标准智能体技能结构（`SKILL.md` + `references/` + `scripts/`）。将所需的插件/技能目录复制到智能体的技能目录（如 `~/.copilot/skills/` 或 `.github/skills/`）即可使用。
 
-### MCP Configuration
+### MCP 配置
 
-`MCP/mcp.json` is a standard MCP client config. **Secrets are not included** — credential values use `${ENV_VAR}` placeholders. Set the corresponding environment variables before use:
+`MCP/mcp.json` 是标准 MCP 客户端配置。**仓库不包含任何密钥**——所有凭据均使用 `${环境变量}` 占位符，使用前请设置对应的环境变量：
 
-| Variable | Used by |
+| 环境变量 | 用途 |
 |----------|---------|
-| `KAGGLE_KEY` | Kaggle MCP server |
-| `ATOMGIT_TOKEN` | Atomgit MCP server |
-| `GITHUB_PAT_TOKEN` | GitHub MCP server (`plugin/github/.mcp.json`) |
+| `KAGGLE_KEY` | Kaggle MCP 服务器 |
+| `ATOMGIT_TOKEN` | Atomgit MCP 服务器 |
+| `GITHUB_PAT_TOKEN` | GitHub MCP 服务器（`plugin/github/.mcp.json`） |
+
+## 注意事项
+
+- 仓库内不含任何真实密钥，凭据均以 `${环境变量}` 占位；
+- `MCP/mcp.json` 中的可执行文件路径为作者本机路径，使用时请按本机实际安装位置修改；
+- `plugin/lark/bin/lark-cli.exe`（约 47MB 的 Windows 可执行文件）未纳入版本库，需从飞书开放平台单独获取后放入该目录；
+- 各技能内的 `references/` 文档为对应技能的参考资料，可按需查阅。
 
 ## License
 
-Personal collection for agent tooling reference.
+MIT，详见 [LICENSE](LICENSE)。个人智能体工具合集，仅供参考。
